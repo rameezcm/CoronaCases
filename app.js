@@ -129,7 +129,6 @@ class RameezDashboard extends HTMLElement {
             this.querySelector("#todayCases").innerText = this.answer.totals.changes.newToday
             this.querySelector("#deaths").innerText = this.answer.totals.dead
             this.querySelector("#todayDeaths").innerText = this.answer.totals.changes.deathsToday
-            this.querySelector("#recovered").innerText = this.answer.totals.recovered
         } 
     }
 }
