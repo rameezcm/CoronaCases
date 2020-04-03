@@ -64,7 +64,6 @@ class RameezDashboard extends HTMLElement {
         this.querySelector("#deaths").innerText = this.answer.deaths
         this.querySelector("#todayDeaths").innerText = this.answer.todayDeaths
         this.querySelector("#recovered").innerText = this.answer.recovered
-        this.querySelector("#critical").innerText = this.answer.critical
 
         const response1 = await fetch("https://corona.lmao.ninja/countries/India", {
             method: 'GET',
