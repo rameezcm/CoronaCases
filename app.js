@@ -1,12 +1,12 @@
 class RameezDashboard extends HTMLElement {
     constructor() {
         super();
-        this.fetchfromServer();
         setInterval(() => this.fetchfromServer(), 90000); // (5)
 
     }
 
     connectedCallback() {
+        this.fetchfromServer();
         this.innerHTML = `<div class="checkout-panel">
         <div class="panel-body">
             <h2 class="title">Rameez Dashboard</h2>
