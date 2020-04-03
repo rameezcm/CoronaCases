@@ -104,6 +104,7 @@ class RameezDashboard extends HTMLElement {
 
     async fetchfromServer() {
         this.callOtherApi();
+        this.callOtherQatarApi();
         const response1 = await fetch("https://corona.lmao.ninja/countries/India", {
             method: 'GET',
             headers: {
