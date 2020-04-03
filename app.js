@@ -40,6 +40,14 @@ class RameezDashboard extends HTMLElement {
                 <td id="todayDeathsi"></td>
                 <td id="recoveredi" align="right"></td>
                 </tr>
+                <tr>
+                <td>Qatar</td>
+                <td  id="casesq" align="right"></td>
+                <td id="todayCasesq" align="right"></td>
+                <td id="deathsq" align="right"></td>
+                <td id="todayDeathsq"></td>
+                <td id="recoveredq" align="right"></td>
+                </tr>
                 </tbody></table>
                 </label>   
             </div>
@@ -63,6 +71,25 @@ class RameezDashboard extends HTMLElement {
             this.querySelector("#deaths").innerText = this.answer.deaths
             this.querySelector("#todayDeaths").innerText = this.answer.todayDeaths
             this.querySelector("#recovered").innerText = this.answer.recovered
+        }
+    }
+    
+    async callOtherQatarApi() {
+        const response3 = await fetch("https://corona.lmao.ninja/countries/Qatar", {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': 'https://corona.lmao.ninja'
+            }
+        });
+        if (response3.ok) {
+            const json3 = await response3.json();
+            this.answer = json3;
+            this.querySelector("#casesq").innerText = this.answer.cases
+            this.querySelector("#todayCasesq").innerText = this.answer.todayCases
+            this.querySelector("#deathsq").innerText = this.answer.deaths
+            this.querySelector("#todayDeathsq").innerText = this.answer.todayDeaths
+            this.querySelector("#recoveredq").innerText = this.answer.recovered
         }
     }
 
