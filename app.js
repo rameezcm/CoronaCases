@@ -50,16 +50,21 @@ class RameezDashboard extends HTMLElement {
 
 
     async fetchfromServer() {
-        const response = await fetch("https://corona.lmao.ninja/countries/Norway");
-        if (response.ok) {
-            const json = await response.json();
-            this.answer = json;
-            this.querySelector("#cases").innerText = this.answer.totals.confirmed
-            this.querySelector("#todayCases").innerText = this.answer.totals.changes.newToday
-            this.querySelector("#deaths").innerText = this.answer.totals.dead
-            this.querySelector("#todayDeaths").innerText = this.answer.totals.changes.deathsToday
-            this.querySelector("#recovered").innerText = this.answer.totals.recovered
-        }
+        const response = await fetch("https://corona.lmao.ninja/countries/Norway", {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': 'https://corona.lmao.ninja'
+            }
+        });
+        const json = await response.json();
+        this.answer = json;
+        this.querySelector("#cases").innerText = this.answer.cases
+        this.querySelector("#todayCases").innerText = this.answer.todayCases
+        this.querySelector("#deaths").innerText = this.answer.deaths
+        this.querySelector("#todayDeaths").innerText = this.answer.todayDeaths
+        this.querySelector("#recovered").innerText = this.answer.recovered
+        this.querySelector("#critical").innerText = this.answer.critical
 
         const response1 = await fetch("https://corona.lmao.ninja/countries/India", {
             method: 'GET',
