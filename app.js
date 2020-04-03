@@ -9,7 +9,7 @@ class RameezDashboard extends HTMLElement {
         this.fetchfromServer();
         this.innerHTML = `<div class="checkout-panel">
         <div class="panel-body">
-            <h2 class="title">Rameez Dashboard</h2>
+            <h2 class="title">Dashboard</h2>
             <div id="step4-content" class=" ">
                
                 <table class="table table-bordered table-hover table-condensed">
