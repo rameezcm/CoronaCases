@@ -56,7 +56,7 @@ class RameezDashboard extends HTMLElement {
     }
 
     async callOtherApi() {
-        const response2 = await fetch("https://corona.lmao.ninja/countries/Norway", {
+        const response2 = await fetch("https://corona.lmao.ninja/v2/countries/Norway", {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -75,7 +75,7 @@ class RameezDashboard extends HTMLElement {
     }
     
     async callOtherQatarApi() {
-        const response3 = await fetch("https://corona.lmao.ninja/countries/Qatar", {
+        const response3 = await fetch("https://corona.lmao.ninja/v2/countries/Qatar", {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -105,7 +105,7 @@ class RameezDashboard extends HTMLElement {
     async fetchfromServer() {
         this.callOtherApi();
         this.callOtherQatarApi();
-        const response1 = await fetch("https://corona.lmao.ninja/countries/India", {
+        const response1 = await fetch("https://corona.lmao.ninja/v2/countries/India", {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
