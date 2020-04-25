@@ -1,10 +1,26 @@
 .site-footer {
-display : none !important;
+    display: none !important;
 }
 
 .btn {
-display : none !important;
+    display: none !important;
 }
+
 .main-content {
-max-width : 86rem !important;
+    max-width: 86rem !important;
+}
+
+table thead tr {
+    display: block;
+}
+
+table th,
+table td {
+    width: 100px;
+}
+
+table tbody {
+    display: block;
+    height: 200px;
+    overflow: auto;
 }
