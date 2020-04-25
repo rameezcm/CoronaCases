@@ -6,7 +6,7 @@ class RameezDashboard extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `<form id="rameez_corona_cases">
         <!-- SHOPPING TABLE -->
-        <table  border=1>
+        <table>
             <thead>
                 <tr>
                     <th>Country</th>
