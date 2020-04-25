@@ -5,3 +5,6 @@ display : none !important;
 .btn {
 display : none !important;
 }
+.main-content {
+max-width : 86rem !important;
+}
