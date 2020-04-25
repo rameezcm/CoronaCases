@@ -8,8 +8,3 @@ display : none !important;
 .main-content {
 max-width : 86rem !important;
 }
-th {
-    position: sticky !important;
-
-
-}
