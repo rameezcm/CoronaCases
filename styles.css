@@ -10,6 +10,6 @@ max-width : 86rem !important;
 }
 th {
     position: sticky !important;
-    top: 0 !important;
-    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4) !important;
+
+
 }
