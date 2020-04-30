@@ -10,7 +10,7 @@ class RameezDashboard extends HTMLElement {
             <thead>
                 <tr>
                     <th>Country</th>
-                    <th> . </th>
+                    <th>Flag</th>
                     <th>Cases</th>
                     <th>Deaths</th>
                     <th>New Case</th>
