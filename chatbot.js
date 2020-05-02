@@ -1775,7 +1775,7 @@ $jscomp.polyfill("Object.setPrototypeOf", function(d) { return d ? d : "object" 
         this.projectId || a.push(b.U);
         this.languageCode || a.push(b.O);
         this.apiUri || (this.getAttribute(b.d) ? this.apiUri =
-            "https://api.dialogflow.com/api/integrations/dialogflowMessenger" : this.apiUri = "https://dialogflow.googleapis.com/v2/projects");
+            "https://rameez-chatbot.herokuapp.com/rameez-chat/bot" : this.apiUri = "https://dialogflow.googleapis.com/v2/projects");
         return a
     };
     a.prototype.toggleExpandAttribute_ = function() { this.hasAttribute(b.K) ? this.removeAttribute(b.K) : this.setAttribute(b.K, "") };
