@@ -30,13 +30,9 @@ class RameezDashboard extends HTMLElement {
 
     async fetchfromServer() {
         var items_table = document.getElementById('items_table');
-        const url = 'https://corona.lmao.ninja/v2/countries?sort=cases';
+        const url = 'https://rameez-chatbot.herokuapp.com/rameez-app/covid/count';
         const response = await fetch(url, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': 'https://corona.lmao.ninja'
-            }
+            method: 'GET'
         });
         const jsonResponse = await response.json();
         console.log(jsonResponse);
