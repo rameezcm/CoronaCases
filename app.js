@@ -8,7 +8,7 @@ class RameezDashboard extends HTMLElement {
         <!-- SHOPPING TABLE -->
         <table>
             <thead>
-                <tr>
+                <tr style="background-color: #159957;font-weight: bold;color: white;">
                     <th>Country</th>
                     <th>Flag</th>
                     <th>Cases</th>
