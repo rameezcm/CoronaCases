@@ -41,8 +41,15 @@ class RameezDashboard extends HTMLElement {
                 '</td><td>' + '<img src="' + jsonResponse[ctr].countryInfo.flag + '" height="20px" width="40px">' +
                 '</td><td>' + jsonResponse[ctr].cases +
                 '</td><td>' + jsonResponse[ctr].deaths +
-                '</td><td>' + jsonResponse[ctr].todayCases +
-                '</td><td>' + jsonResponse[ctr].todayDeaths +
+                '</td><td style="
+    background-color: khaki;
+    font-weight: bold;
+">' + jsonResponse[ctr].todayCases +
+                '</td><td style="
+    color: white;
+    background-color: red;
+    font-weight: bold;
+">' + jsonResponse[ctr].todayDeaths +
                 '</td><td>' + jsonResponse[ctr].recovered +
                 '</td><td>' + jsonResponse[ctr].critical +
                 '</td><td>' + jsonResponse[ctr].tests +
