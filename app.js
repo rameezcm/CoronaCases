@@ -30,7 +30,7 @@ class RameezDashboard extends HTMLElement {
 
     async fetchfromServer() {
         var items_table = document.getElementById('items_table');
-        const url = 'https://rameez-chatbot.herokuapp.com/rameez-app/covid/count';
+        const url = 'https://rameez-covid-cases.herokuapp.com/rameez-app/covid/count';
         const response = await fetch(url, {
             method: 'GET'
         });
