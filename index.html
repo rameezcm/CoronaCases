@@ -1,71 +1,125 @@
----
-layout: default
----
-<!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8" />
 
-<head>
-    <meta charset="UTF-8">
-    <title>Rameez Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+        <!-- Begin Jekyll SEO tag v2.6.1 -->
+        <title>CoronaCases</title>
+        <meta name="generator" content="Jekyll v3.9.0" />
+        <meta property="og:title" content="CoronaCases" />
+        <meta property="og:locale" content="en_US" />
+        <link rel="canonical" href="https://rameezcm.github.io/CoronaCases/" />
+        <meta property="og:url" content="https://rameezcm.github.io/CoronaCases/" />
+        <meta property="og:site_name" content="CoronaCases" />
+        <script type="application/ld+json">
+            { "@type": "WebSite", "headline": "CoronaCases", "url": "https://rameezcm.github.io/CoronaCases/", "name": "CoronaCases", "@context": "https://schema.org" }
+        </script>
+        <!-- End Jekyll SEO tag -->
 
-<body>
-
-   <script>
-        (function(global) {
-            'use strict';
-
-            var CUSTOM_ELEMENTS_ADAPTER_URL =
-                'https://static.dialogflow.com/common/messenger/webcomponentsjs/2.1.3/custom-elements-es5-adapter.js';
-            var WEBCOMPONENTS_LOADER_URL =
-                'https://static.dialogflow.com/common/messenger/webcomponentsjs/2.1.3/webcomponents-loader.js';
-            var MESSENGER_URL =
-                'chatbot.js';
-
-            var loadDfMessenger = function() {
-                var elementScript = document.createElement('script');
-                elementScript.addEventListener('load', onMessengerLoaded, false);
-                elementScript.src = MESSENGER_URL;
-                global.document.body.insertBefore(elementScript, null);
-            };
-
-            var onMessengerLoaded = function() {
-                window.dispatchEvent(new Event('dfMessengerLoaded'))
-            };
-
-            var loadWebComponentPolyfills = function() {
-                var customElementsAdapterTag = document.createElement('script');
-                if (global.customElements) {
-                    // Import custom elements adapter which is needed for Custom element
-                    // classes transpiled to ES5.
-                    customElementsAdapterTag.src = CUSTOM_ELEMENTS_ADAPTER_URL;
-                    document.head.appendChild(customElementsAdapterTag);
-                }
-                // Import web components loader which loads polyfills based on browser
-                // support.
-                const webComponentsLoaderTag = document.createElement('script');
-                webComponentsLoaderTag.src = WEBCOMPONENTS_LOADER_URL;
-                global.document.head.appendChild(webComponentsLoaderTag);
-            };
-
-            global.addEventListener('WebComponentsReady', loadDfMessenger, false);
-
-            var raf = global.requestAnimationFrame || global.mozRequestAnimationFrame ||
-                global.webkitRequestAnimationFrame || global.msRequestAnimationFrame;
-            if (raf) {
-                raf(function() {
-                    global.setTimeout(loadWebComponentPolyfills, 0);
-                });
-            } else {
-                global.addEventListener('load', loadWebComponentPolyfills);
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#157878" />
+        <link rel="stylesheet" href="/CoronaCases/assets/css/style.css?v=094899bb14caef05300e5c67201d7550153022bd" />
+        <script src="https://static.dialogflow.com/common/messenger/webcomponentsjs/2.1.3/custom-elements-es5-adapter.js"></script>
+        <script src="https://static.dialogflow.com/common/messenger/webcomponentsjs/2.1.3/webcomponents-loader.js"></script>
+        <style type="text/css">
+            :root {
+                --df-messenger-bot-message: #fff;
+                --df-messenger-button-titlebar-color: #42a5f5;
+                --df-messenger-button-titlebar-font-color: #fff;
+                --df-messenger-chat-background-color: #fafafa;
+                --df-messenger-font-color: rgba(0, 0, 0, 0.87);
+                --df-messenger-input-box-color: #fff;
+                --df-messenger-input-font-color: rgba(0, 0, 0, 0.87);
+                --df-messenger-input-placeholder-font-color: #757575;
+                --df-messenger-minimized-chat-close-icon-color: rgba(0, 0, 0, 0.87);
+                --df-messenger-send-icon: #42a5f5;
+                --df-messenger-user-message: #ddd;
+                --df-messenger-chip-color: #fff;
+                --df-messenger-chip-border-color: #e0e0e0;
             }
-        })(window);
-    </script>
-    <df-messenger intent="WELCOME" chat-title="Rameez-chat-bot" agent-id="dcb5f49c-746d-40c3-9951-e3d179bd87b0" language-code="en"></df-messenger>
- <rameez-page></rameez-page>
-    <script src="app.js"></script>
-</body>
-<footer style="padding-top: 2%;padding-left: 39%;font-size: larger;font-weight: bold;color: white;background-color: #159957;padding-bottom: 2%;">Powered by Rameez CM</footer>
+        </style>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+    </head>
 
+    <body>
+        <section class="page-header">
+            <h1 class="project-name">CoronaCases</h1>
+            <h2 class="project-tagline"></h2>
+
+            <a href="https://github.com/rameezcm/CoronaCases" class="btn">View on GitHub</a>
+        </section>
+
+        <section class="main-content">
+            <meta charset="UTF-8" />
+            <title>Rameez Dashboard</title>
+            <link rel="stylesheet" href="styles.css" />
+
+            <script>
+                (function (global) {
+                    "use strict";
+
+                    var CUSTOM_ELEMENTS_ADAPTER_URL = "https://static.dialogflow.com/common/messenger/webcomponentsjs/2.1.3/custom-elements-es5-adapter.js";
+                    var WEBCOMPONENTS_LOADER_URL = "https://static.dialogflow.com/common/messenger/webcomponentsjs/2.1.3/webcomponents-loader.js";
+                    var MESSENGER_URL = "chatbot.js";
+
+                    var loadDfMessenger = function () {
+                        var elementScript = document.createElement("script");
+                        elementScript.addEventListener("load", onMessengerLoaded, false);
+                        elementScript.src = MESSENGER_URL;
+                        global.document.body.insertBefore(elementScript, null);
+                    };
+
+                    var onMessengerLoaded = function () {
+                        window.dispatchEvent(new Event("dfMessengerLoaded"));
+                    };
+
+                    var loadWebComponentPolyfills = function () {
+                        var customElementsAdapterTag = document.createElement("script");
+                        if (global.customElements) {
+                            // Import custom elements adapter which is needed for Custom element
+                            // classes transpiled to ES5.
+                            customElementsAdapterTag.src = CUSTOM_ELEMENTS_ADAPTER_URL;
+                            document.head.appendChild(customElementsAdapterTag);
+                        }
+                        // Import web components loader which loads polyfills based on browser
+                        // support.
+                        const webComponentsLoaderTag = document.createElement("script");
+                        webComponentsLoaderTag.src = WEBCOMPONENTS_LOADER_URL;
+                        global.document.head.appendChild(webComponentsLoaderTag);
+                    };
+
+                    global.addEventListener("WebComponentsReady", loadDfMessenger, false);
+
+                    var raf = global.requestAnimationFrame || global.mozRequestAnimationFrame || global.webkitRequestAnimationFrame || global.msRequestAnimationFrame;
+                    if (raf) {
+                        raf(function () {
+                            global.setTimeout(loadWebComponentPolyfills, 0);
+                        });
+                    } else {
+                        global.addEventListener("load", loadWebComponentPolyfills);
+                    }
+                })(window);
+            </script>
+            <df-messenger
+                intent="WELCOME"
+                chat-title="Rameez-chat-bot"
+                agent-id="dcb5f49c-746d-40c3-9951-e3d179bd87b0"
+                language-code="en"
+                session-id="dfMessenger-66451806"
+                api-uri="https://rameez-covid-cases.herokuapp.com/rameez-chat/bot"
+            ></df-messenger>
+            <rameez-page></rameez-page>
+            <script src="app.js"></script>
+
+            <footer style="padding-top: 2%; padding-left: 39%; font-size: larger; font-weight: bold; color: white; background-color: #159957; padding-bottom: 2%;">Powered by Rameez CM</footer>
+
+            <footer class="site-footer">
+                <span class="site-footer-owner"><a href="https://github.com/rameezcm/CoronaCases">CoronaCases</a> is maintained by <a href="https://github.com/rameezcm">rameezcm</a>.</span>
+
+                <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+            </footer>
+        </section>
+
+        <script src="chatbot.js"></script>
+    </body>
 </html>
